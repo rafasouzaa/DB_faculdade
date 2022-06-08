@@ -157,3 +157,721 @@ CREATE TABLE if not exists professor_disciplina (
     foreign key (fk_cod_professor) REFERENCES professor (cod_professor),
     foreign key (fk_cod_disciplina) REFERENCES disciplina (cod_disciplina)
 );
+
+----------- INSERINDO DADOS ------------------------------
+USE faculdade;
+
+INSERT INTO
+    tipo_telefone (tipo_telefone) ('res'),
+    ('tel'),
+    ('com');
+
+INSERT INTO
+    tipo_logradouro (tipo_logradouro)
+VALUES
+    ('rua'),
+    ('avenida'),
+    ('quadra'),
+    ('rodovia'),
+    ('chacara'),
+    ('loteamento');
+
+INSERT INTO
+    endereco (
+        nome_rua,
+        numero_rua,
+        complemento,
+        cep,
+        fk_cod_tipo_logradouro
+    )
+VALUES
+    ('cavalinho', '18', 'casa 01', '12245023', '1'),
+    ('nova', '17', 'casa 02', '12207823', '2'),
+    ('das pedras', '16', 'casa 03', '17800023', '5'),
+    ('aeroporto', '15', 'casa 04', '12200032', '3'),
+    ('sol nascente', '14', 'casa 05', '12269023', '5'),
+    ('rafaela', '13', 'casa 06', '12200653', '2'),
+    ('das arvores', '12', 'casa 07', '17800023', '4'),
+    ('das palmeiras', '11', 'casa 8', '12222023', '1'),
+    ('das rosas', '10', 'casa 9', '12274023', '6'),
+    ('dos ipes', '09', 'casa 10', '12212323', '1'),
+    (
+        'dos girassois',
+        '08',
+        'casa 11',
+        '74200023',
+        '3'
+    ),
+    ('das tulipas', '07', 'casa 12', '72200023', '1'),
+    ('do ouro', '06', 'casa 13', '78500023', '1'),
+    ('rocinha', '05', 'casa 14', '32200023', '5'),
+    ('do sol', '04', 'casa 15', '22200023', '1'),
+    ('da lua', '03', 'casa 16', '77200023', '1'),
+    ('das estrelas', '02', 'casa 17', '78200023', '2'),
+    ('do mar', '01', 'casa 18', '76200023', '1');
+
+INSERT INTO
+    telefone (num_telefone, fk_cod_tipo)
+VALUES
+    ('56231874563', '1'),
+    ('54874563248', '2'),
+    ('23154789654', '3'),
+    ('21456896521', '1'),
+    ('65874523147', '2'),
+    ('65231478963', '3'),
+    ('52148963247', '1'),
+    ('54124789621', '2'),
+    ('32578965412', '3'),
+    ('56324789654', '1'),
+    ('23148965742', '2'),
+    ('23214789652', '3'),
+    ('32569874126', '1'),
+    ('21478569852', '2'),
+    ('23154875632', '3'),
+    ('53214789654', '2'),
+    ('23148965741', '3'),
+    ('23185965478', '1'),
+    ('21598745632', '2'),
+    ('21478569852', '3'),
+    ('21478569874', '2'),
+    ('23156521489', '3'),
+    ('23148568745', '1'),
+    ('23214566587', '2'),
+    ('63254789631', '3'),
+    ('12356987452', '3');
+
+INSERT INTO
+    departamento (nome_departamento)
+VALUES
+    ('cien_humanas'),
+    ('matematica'),
+    ('biologicas'),
+    ('estagio'),
+    ('tec informacao');
+
+INSERT INTO
+    disciplina (
+        nome_disciplina,
+        carga_horaria,
+        descricao,
+        num_alunos,
+        fk_cod_departamento
+    )
+VALUES
+    (
+        'raciocinio logico',
+        '200',
+        'sem descricao',
+        '40',
+        '7'
+    ),
+    (
+        'psicologia cognitiva',
+        '300',
+        'sem descricao',
+        '50',
+        '6'
+    ),
+    (
+        'eletronica digital',
+        '400',
+        'sem descricao',
+        '60',
+        '7'
+    ),
+    (
+        'programacao em C',
+        '200',
+        'sem descricao',
+        '70',
+        '10'
+    ),
+    ('sociologia', '300', 'sem descricao', '80', '8'),
+    ('economia', '310', 'sem descricao', '90', '7'),
+    ('filosofia', '320', 'sem descricao', '10', '6'),
+    ('hidraulica', '330', 'sem descricao', '40', '7'),
+    ('fisica', '340', 'sem descricao', '50', '8'),
+    ('matematica', '350', 'sem descricao', '60', '9'),
+    (
+        'quimica basica',
+        '360',
+        'sem descricao',
+        '70',
+        '10'
+    ),
+    (
+        'sociologia aplicada',
+        '370',
+        'sem descricao',
+        '80',
+        '6'
+    ),
+    ('algebra', '380', 'sem descricao', '90', '7'),
+    (
+        'entomologia',
+        '390',
+        'sem descricao',
+        '100',
+        '8'
+    ),
+    (
+        'psicologia clinica',
+        '390',
+        'sem descricao',
+        '40',
+        '9'
+    ),
+    (
+        'banco de dados',
+        '390',
+        'sem descricao',
+        '50',
+        '10'
+    ),
+    ('filosofia', '400', 'sem descricao', '60', '6'),
+    (
+        'trigonometria',
+        '250',
+        'sem descricao',
+        '70',
+        '7'
+    ),
+    ('botanica', '220', 'sem descricao', '80', '8'),
+    ('laboratorio', '358', 'sem descricao', '90', '9'),
+    ('java', '260', 'sem descricao', '100', '10'),
+    (
+        'historia da arte',
+        '150',
+        'sem descricao',
+        '40',
+        '6'
+    ),
+    ('equacoes', '190', 'sem descricao', '50', '7'),
+    (
+        'anatomia vertebrados',
+        '370',
+        'sem descricao',
+        '60',
+        '8'
+    ),
+    (
+        'eletrotecnica',
+        '214',
+        'sem descricao',
+        '70',
+        '9'
+    ),
+    ('front end', '400', 'sem descricao', '80', '10'),
+    (
+        'pensamento critico',
+        '240',
+        'sem descricao',
+        '90',
+        '6'
+    ),
+    ('calculo 1', '280', 'sem descricao', '100', '7'),
+    (
+        'fisiologia vegetal',
+        '325',
+        'sem descricao',
+        '40',
+        '8'
+    ),
+    (
+        'programacao',
+        '360',
+        'sem descricao',
+        '50',
+        '10'
+    );
+
+INSERT INTO
+    professor (
+        nome_professor,
+        sobrenome_professor,
+        status,
+        fk_cod_departamento
+    )
+VALUES
+    ('luciano', 'lopes', '1', '10'),
+    ('carlos', 'souza', '1', '9'),
+    ('amanda', 'alves', '0', '8'),
+    ('juliana', 'santos', '1', '7'),
+    ('fernando', 'barbosa', '1', '6'),
+    ('patricia', 'bastos', '0', '7'),
+    ('rodrigo', 'campos', '1', '8'),
+    ('ana', 'lima', '1', '9'),
+    ('mariana', 'rodrigues', '0', '10'),
+    ('selma', 'martins', '1', '9');
+
+INSERT INTO
+    curso (nome_curso, fk_cod_departamento)
+VALUES
+    ('eng software', '10'),
+    ('analise de sistemas', '10'),
+    ('biologia', '8'),
+    ('historia', '6'),
+    ('matematica', '7'),
+    ('engenharia eletrica', '7'),
+    ('psicologia', '6'),
+    ('agronomia', '8'),
+    ('gastronomia', '6'),
+    ('sociologia', '6');
+
+INSERT INTO
+    turma (
+        periodo,
+        num_alunos,
+        dt_inicio,
+        dt_fim,
+        fk_cod_curso
+    )
+VALUES
+    ('1', '20', '2022-01-01', '2027-01-01', '1'),
+    ('2', '30', '2022-01-02', '2027-01-02', '2'),
+    ('3', '40', '2022-01-03', '2027-01-03', '3'),
+    ('4', '50', '2022-01-04', '2027-01-04', '4'),
+    ('5', '20', '2022-01-05', '2027-01-05', '5'),
+    ('6', '30', '2022-01-06', '2027-01-06', '6'),
+    ('7', '40', '2022-01-07', '2027-01-07', '7'),
+    ('8', '50', '2022-01-08', '2027-01-08', '8');
+
+INSERT INTO
+    aluno (
+        nome_aluno,
+        sobrenome_aluno,
+        cpf,
+        status,
+        sexo,
+        nome_pai,
+        nome_mae,
+        email,
+        whatsapp,
+        fk_cod_curso,
+        fk_cod_turma,
+        fk_cod_endereco
+    )
+VALUES
+    (
+        'paula',
+        'matos',
+        '58965821478',
+        '1',
+        'FEM',
+        'jorge',
+        'barbara',
+        '123@mail.com',
+        '58963214789',
+        '1',
+        '1',
+        '1'
+    ),
+    (
+        'amanda',
+        'guedes',
+        '58965871478',
+        '0',
+        'FEM',
+        'antonio',
+        'debora',
+        '456@mail.com',
+        '56231874563',
+        '2',
+        '2',
+        '3'
+    ),
+    (
+        'filomena',
+        'rodrigues',
+        '55965821478',
+        '1',
+        'FEM',
+        'felipe',
+        'filomena',
+        '789@mail.com',
+        '5321456984',
+        '3',
+        '3',
+        '4'
+    ),
+    (
+        'alice',
+        'medeiros',
+        '58965826478',
+        '1',
+        'FEM',
+        'luciano',
+        'laura',
+        '523@mail.com',
+        '32147896541',
+        '4',
+        '4',
+        '5'
+    ),
+    (
+        'joana',
+        'antonia',
+        '58965881478',
+        '0',
+        'FEM',
+        'antonio',
+        'camila',
+        '574@mail.com',
+        '32147996541',
+        '5',
+        '5',
+        '6'
+    ),
+    (
+        'ivo',
+        'colombo',
+        '53965821478',
+        '1',
+        'MAS',
+        'sergio',
+        'thais',
+        '523@mail.com',
+        '32177896541',
+        '6',
+        '6',
+        '2'
+    ),
+    (
+        'carlos',
+        'carvalho',
+        '58965826478',
+        '1',
+        'MAS',
+        'joao',
+        'zenaide',
+        '786@mail.com',
+        '32947896541',
+        '7',
+        '7',
+        '2'
+    ),
+    (
+        'antonio',
+        'brito',
+        '58965825478',
+        '1',
+        'MAS',
+        'jose',
+        'zilma',
+        '214@mail.com',
+        '22147896541',
+        '8',
+        '8',
+        '7'
+    ),
+    (
+        'jose',
+        'tomaz',
+        '58967821478',
+        '1',
+        'MAS',
+        'januario',
+        'tereza',
+        '565@mail.com',
+        '32147896941',
+        '9',
+        '1',
+        '8'
+    ),
+    (
+        'eva',
+        'ferreira',
+        '58965821473',
+        '1',
+        'FEM',
+        'marcos',
+        'sonia',
+        '327@mail.com',
+        '32147396541',
+        '10',
+        '2',
+        '9'
+    ),
+    (
+        'barney',
+        'guedes',
+        '58965821448',
+        '1',
+        'MAS',
+        'paulo',
+        'sandra',
+        '856@mail.com',
+        '32147846541',
+        '1',
+        '3',
+        '10'
+    ),
+    (
+        'rafaela',
+        'ribeiro',
+        '58905821478',
+        '1',
+        'FEM',
+        'andre',
+        'valdelita',
+        '412@mail.com',
+        '32147896571',
+        '2',
+        '4',
+        '11'
+    ),
+    (
+        'josefa',
+        'santos',
+        '58165821478',
+        '1',
+        'FEM',
+        'manoel',
+        'lucia',
+        '658@mail.com',
+        '23154789654',
+        '3',
+        '5',
+        '12'
+    ),
+    (
+        'eliete',
+        'souza',
+        '58965822478',
+        '1',
+        'FEM',
+        'valdomiro',
+        'marcia',
+        '321@mail.com',
+        '21456896521',
+        '4',
+        '6',
+        '13'
+    ),
+    (
+        'laura',
+        'costa',
+        '58965827478',
+        '1',
+        'FEM',
+        'francisco',
+        'angela',
+        '963@mail.com',
+        '32147496541',
+        '5',
+        '7',
+        '14'
+    ),
+    (
+        'manoel',
+        'batista',
+        '53965821478',
+        '0',
+        'MAS',
+        'deusdete',
+        'karla',
+        '147@mail.com',
+        '32147896841',
+        '6',
+        '8',
+        '15'
+    ),
+    (
+        'josue',
+        'diniz',
+        '58965821678',
+        '1',
+        'MAS',
+        'fabio',
+        'maria',
+        '987@mail.com',
+        '32141896541',
+        '7',
+        '1',
+        '16'
+    ),
+    (
+        'daniele',
+        'ribeiro',
+        '58960821478',
+        '1',
+        'FEM',
+        'marcelo',
+        'luana',
+        '753@mail.com',
+        '65874523147',
+        '8',
+        '2',
+        '17'
+    ),
+    (
+        'danilo',
+        'barbosa',
+        '58966821478',
+        '1',
+        'MAS',
+        'tiago',
+        'lindaura',
+        '357@mail.com',
+        '32147196541',
+        '9',
+        '3',
+        '18'
+    ),
+    (
+        'jorge',
+        'santos',
+        '58965811478',
+        '1',
+        'MAS',
+        'matheus',
+        'valdeci',
+        '951@mail.com',
+        '32147896941',
+        '10',
+        '4',
+        '19'
+    );
+
+INSERT INTO
+    historico (dt_inicio, dt_fim, fk_ra)
+VALUES
+    ('2022-01-01', '2027-01-02', '1'),
+    ('2022-01-02', '2027-01-02', '2'),
+    ('2022-01-03', '2027-01-03', '3'),
+    ('2022-01-04', '2027-01-04', '4'),
+    ('2022-01-05', '2027-01-05', '5'),
+    ('2022-01-06', '2027-01-06', '6'),
+    ('2022-01-07', '2027-01-07', '7'),
+    ('2022-01-08', '2027-01-08', '8'),
+    ('2022-01-10', '2027-01-09', '9'),
+    ('2022-01-11', '2027-01-10', '10'),
+    ('2022-01-15', '2027-01-11', '11'),
+    ('2022-01-02', '2027-01-12', '12'),
+    ('2022-01-03', '2027-01-13', '13'),
+    ('2022-01-04', '2027-01-14', '14'),
+    ('2022-01-11', '2027-01-15', '15'),
+    ('2022-01-21', '2027-01-16', '16'),
+    ('2022-01-31', '2027-01-17', '17'),
+    ('2022-01-04', '2027-01-18', '18'),
+    ('2022-01-03', '2027-01-12', '19'),
+    ('2022-01-15', '2027-01-06', '20');
+
+INSERT INTO
+    telefone_aluno (fk_ra, fk_cod_telefone)
+VALUES
+    ('1', '6'),
+    ('2', '1'),
+    ('4', '7'),
+    ('5', '8'),
+    ('6', '9'),
+    ('7', '10'),
+    ('9', '11'),
+    ('10', '12'),
+    ('12', '2'),
+    ('13', '3'),
+    ('14', '4'),
+    ('16', '13'),
+    ('17', '14'),
+    ('18', '5'),
+    ('19', '15'),
+    ('20', '16');
+
+INSERT INTO
+    aluno_disciplina (fk_ra, fk_cod_disciplina)
+VALUES
+    ('1', '91'),
+    ('2', '92'),
+    ('3', '93'),
+    ('4', '94'),
+    ('5', '95'),
+    ('6', '96'),
+    ('7', '97'),
+    ('8', '98'),
+    ('9', '99'),
+    ('10', '100'),
+    ('11', '102'),
+    ('12', '101'),
+    ('13', '103'),
+    ('14', '104'),
+    ('15', '105'),
+    ('16', '106'),
+    ('17', '107'),
+    ('18', '108'),
+    ('19', '109'),
+    ('20', '110');
+
+* /
+INSERT INTO
+    curso_disciplina (fk_cod_curso, fk_cod_disciplina)
+VALUES
+    ('1', '91'),
+    ('2', '92'),
+    ('3', '93'),
+    ('4', '94'),
+    ('5', '95'),
+    ('6', '96'),
+    ('7', '97'),
+    ('8', '98'),
+    ('9', '99'),
+    ('10', '100'),
+    ('1', '101'),
+    ('2', '102'),
+    ('3', '103'),
+    ('4', '91'),
+    ('5', '104'),
+    ('6', '105'),
+    ('7', '106'),
+    ('8', '107'),
+    ('9', '108'),
+    ('10', '109'),
+    ('1', '110'),
+    ('2', '111'),
+    ('3', '112'),
+    ('4', '113'),
+    ('5', '115'),
+    ('6', '115');
+
+INSERT INTO
+    professor_disciplina (fk_cod_professor, fk_cod_disciplina)
+VALUES
+    ('1', '91'),
+    ('2', '92'),
+    ('3', '93'),
+    ('4', '94'),
+    ('5', '95'),
+    ('6', '96'),
+    ('7', '97'),
+    ('8', '98'),
+    ('9', '99'),
+    ('10', '100');
+
+* /
+INSERT INTO
+    disciplina_historico (
+        nota,
+        frequencia,
+        fk_cod_historico,
+        fk_cod_disciplina
+    )
+VALUES
+    ('6.2', '100', '1', '91'),
+    ('6.5', '50', '2', '92'),
+    ('7.5', '60', '3', '93'),
+    ('8.5', '70', '4', '94'),
+    ('9.5', '80', '5', '95'),
+    ('5.6', '90', '6', '96'),
+    ('5.7', '51', '7', '97'),
+    ('5.8', '52', '8', '98'),
+    ('5.9', '53', '9', '99'),
+    ('10', '54', '10', '100'),
+    ('1.5', '55', '11', '101'),
+    ('2.5', '56', '12', '102'),
+    ('5.6', '57', '13', '103'),
+    ('5.7', '58', '14', '104'),
+    ('8.5', '59', '15', '105'),
+    ('9.5', '61', '16', '106'),
+    ('4.5', '62', '17', '107'),
+    ('2.5', '63', '18', '108'),
+    ('6.5', '64', '19', '109'),
+    ('3.5', '65', '20', '110');
